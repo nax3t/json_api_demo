@@ -1,7 +1,5 @@
 <h1>Search Results</h1>
 <% @movies["Search"].each do |movie| %>
-	<p><%= movie["Title"] %></p>
+	<p><%= movie["Title"] %> <strong><%= movie["Year"] %></strong></p>
 <% end %>
-
-"Title"
-"Year"
+<%= link_to 'Back', welcome_index_path %>
