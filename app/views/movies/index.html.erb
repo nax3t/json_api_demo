@@ -6,7 +6,8 @@
 
 <h1>Search Results for "<%= @query %>"</h1>
 <% @movies.each do |movie| %>
-  <p><%= movie["Title"] %> <strong><%= movie["Year"] %></strong> | <%= link_to 'Favorite', favorite_path(movie["Title"], movie["Year"]), method: :post %></p>
+  <p><%= movie["Title"] %> <strong><%= movie["Year"] %></strong> | <%= button_to "Favorite", favorites_path(favorite: {title: movie["Title"], year: movie["Year"]}) %>
+  </p>
 <% end %>
 
 <h1>Favorite Movies</h1>

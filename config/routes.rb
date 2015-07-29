@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   root 'movies#index'
   resources :movies, only: :index
 
-  post 'movies/:title/:year' => 'movies#favorite', as: :favorite
+  resources :favorites, only: :create
+
+  #post 'movies/:title/:year' => 'movies#favorite', as: :favorite
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
