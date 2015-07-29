@@ -1,0 +1,4 @@
+<%= simple_form_for :search, url: movies_path, :method => 'get' do |f| %>
+  <%= f.input :query, :placeholder => 'Movie title', input_html: { name: :query } %>
+  <%= f.button :submit, "Submit" %>
+<% end %>
