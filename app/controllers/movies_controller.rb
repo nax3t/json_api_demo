@@ -8,10 +8,4 @@ class MoviesController < ApplicationController
 
     @favorites = Favorite.all
   end
-
-  def favorite
-  	favorite = {title: params[:title], year: params[:year]}
-  	@favorite = Favorite.create(favorite)
-  	redirect_to movies_path
-  end
 end
