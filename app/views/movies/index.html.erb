@@ -4,7 +4,11 @@
   <%= submit_tag "Search" %>
 <% end %>
 
-<h1>Search Results for "<%= @query %>"</h1>
-<% @movies.each do |movie| %>
-  <p><%= movie["Title"] %> <strong><%= movie["Year"] %></strong></p>
+<h1>Search Results for "<%= @query %>":</h1>
+<% if @movies %>
+	<% @movies.each do |movie| %>
+		<p><%= movie["Title"] %> | <%= movie["Year"] %></p>
+	<% end %>
+<% else %>
+	<p>No results found, please search again</p>
 <% end %>
